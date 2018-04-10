@@ -17,3 +17,5 @@ RUN apt-get update \
     && rm -f *.zip *.tpz \
     && apt-get purge -y --auto-remove wget unzip \
     && rm -rf /var/lib/apt/lists/*
+
+RUN mkdir -p ~/.cache && mkdir -p ~/.config/godot
