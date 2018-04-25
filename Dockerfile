@@ -13,7 +13,7 @@ RUN apt-get update \
     && unzip Godot_v*_linux_server.64.zip \
     && mv Godot_v*_linux_server.64 /bin/godot \
     && mkdir -p ~/.local/share/godot/templates \
-    && unzip -d Godot_v*_export_templates.tpz \
+    && unzip Godot_v*_export_templates.tpz \
     && mv templates/ ~/.local/share/godot/templates/${GODOT_VERSION}.${GODOT_VARIANT}/ \
     && rm -f *.zip *.tpz \
     && apt-get purge -y --auto-remove wget unzip \
