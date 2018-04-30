@@ -5,7 +5,8 @@ MAINTAINER Mattias Cibien <mattias@mattiascibien.net>
 ARG GODOT_VERSION=3.0.2
 ARG GODOT_VARIANT=stable
 
-RUN apk update
+RUN echo "ipv6" >> /etc/modules \
+    && apk update \
     && apk add wget unzip zip \
     && wget \
 "http://download.tuxfamily.org/godotengine/${GODOT_VERSION}/Godot_v${GODOT_VERSION}-${GODOT_VARIANT}_linux_server.64.zip" \
