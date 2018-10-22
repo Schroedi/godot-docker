@@ -4,11 +4,10 @@ MAINTAINER IoriBranford <ioribranford@gmail.com>
 
 ARG GODOT_VERSION=3.0.6
 ARG GODOT_VARIANT=stable
-ARG PKGS=wget unzip zip android-tools-adb
 
 RUN echo "ipv6" >> /etc/modules \
     && apt-get update -q \
-    && apt-get install -yq ${PKGS} \
+    && apt-get install -yq wget unzip zip android-tools-adb \
     && wget \
 "http://download.tuxfamily.org/godotengine/${GODOT_VERSION}/Godot_v${GODOT_VERSION}-${GODOT_VARIANT}_linux_headless.64.zip" \
 "http://downloads.tuxfamily.org/godotengine/${GODOT_VERSION}/Godot_v${GODOT_VERSION}-${GODOT_VARIANT}_export_templates.tpz" \
