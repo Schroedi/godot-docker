@@ -1,10 +1,10 @@
-FROM debian:stretch-slim
+FROM openjdk:8-jdk
 
 MAINTAINER IoriBranford <ioribranford@gmail.com>
 
 ARG GODOT_VERSION=3.0.6
 ARG GODOT_VARIANT=stable
-ARG PKGS=wget unzip zip
+ARG PKGS=wget unzip zip android-tools-adb
 
 RUN echo "ipv6" >> /etc/modules \
     && apt-get update -q \
